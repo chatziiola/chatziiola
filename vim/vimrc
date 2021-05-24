@@ -1,0 +1,125 @@
+" Settings {{{
+syntax enable 
+
+" Use vim and not vi api - default setting
+set nocompatible
+
+" Files, backups and undo
+set nobackup
+set nowb
+set noswapfile
+
+" Always show current position
+set ruler
+
+" Show incomplete commands -TESTING
+set showcmd
+
+" A buffer becomes hidden when it is in the background and has unsaved changes
+set hidden
+
+" Line number
+set number
+
+" Better splits: New wins appear below and to the right
+set splitbelow
+set splitright
+
+" Highlight current line
+" It's a setting that I love with specific colorschemes yet doesn't work quite
+" well with pywal
+" set cursorline
+
+" Default Interface stuff
+set colorcolumn=80
+
+" Make sure that you dont get annoyed by beeps
+set noerrorbells 												" TESTING
+set novisualbell
+
+" Redrawy only when we need to - TESTING
+set lazyredraw
+
+set encoding=utf8
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Set to autoread when file is changed from outside
+set autoread
+
+" Useful
+set wildmenu
+set wildignore=*.o,*~,*.pyc,.git\*
+
+" Search settings
+set ignorecase
+set smartcase
+set hlsearch
+set showmatch 
+
+" Tabs
+set shiftwidth=4
+set tabstop=4
+
+" Spelling
+" Useful setting to know about 
+" set spell
+" }}}
+
+" Mappings {{{
+" move vertically by visual line (don't skip wrapped lines)
+nmap j gj
+nmap k gk
+" it doesn't hurt to have another way to do stuff :P
+nmap <leader>q :qa<cr>
+" }}}
+
+" Plugins {{{
+execute pathogen#infect()
+
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+" It doesn't work really well with colorscheme wal
+" TODO fix it so that it works (the workaround is wrong i suppose)
+" set termguicolors
+colorscheme wal
+set background=dark
+
+" => vim-airline
+let g:airline_powerline_fonts = 1
+
+" => vimtex
+" To read the complete documentation:  https://github.com/lervag/vimtex
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+let g:tex_flavor='latex'
+let g:tex_conceal='abdmg'
+set conceallevel=1
+
+" => If you're into taking notes in LaTeX check castel.dev
+" inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+" nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+
+" => ultisnips
+" To read the complete documentation: https://github.com/SirVer/ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+" => nerdtree plugin
+" To read the complete documentation: https://github.com/preservim/nerdtree 
+nnoremap <leader>f :NERDTreeFind<CR>
+" }}}
+
+" Functions {{{
+augroup mygroup 
+	autocmd!
+	autocmd BufRead * setlocal foldmethod=marker
+	autocmd BufRead * normal zM
+	autocmd BufRead *.tex setlocal colorcolumn=0
+	autocmd FileWritePost *.tex  normal VimtexClean<cr>
+augroup end
+" }}}
