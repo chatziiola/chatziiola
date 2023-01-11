@@ -3,7 +3,7 @@
 You've visited my Github Profile!
 Feel free to visit my website on: https://chatziiola.github.io. 
 
-What follows is an exceprt from John Barlow's *Declaration of Independence of the Cyberspace*
+What follows is an excerpt from John Barlow's *Declaration of Independence of the Cyberspace*
 
 >   Cyberspace consists of transactions, relationships, and thought itself, arrayed like a standing wave in the web of our communications. Ours is a world that is both everywhere and nowhere, but it is not where bodies live.
 >  We are creating a world that all may enter without privilege or prejudice accorded by race, economic power, military force, or station of birth.
