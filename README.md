@@ -2,7 +2,7 @@
    
 You've visited my Github Profile!
 
-Feel free to visit my website on: https://blog.chatziiola.live 
+Feel free to visit my website on: https://chatziiola.github.io
 
 
 >   Cyberspace consists of transactions, relationships, and thought itself, arrayed like a standing wave in the web of our communications. Ours is a world that is both everywhere and nowhere, but it is not where bodies live.
