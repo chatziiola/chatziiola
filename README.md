@@ -25,3 +25,9 @@ The 30-second bio:
   <a href="https://docs.ansible.com/"><img src="https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white" alt="Ansible Icon"></a>
   <a href="https://www.kernel.org/doc/html/latest/"><img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux Icon"></a>
 </p>
+
+---
+
+<p align="center">
+    <img src="https://www.hackthebox.com/badge/image/421406">
+</p>
